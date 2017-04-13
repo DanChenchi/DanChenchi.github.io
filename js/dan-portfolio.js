@@ -50,7 +50,7 @@ function addThumbnail(image_name, title) {
 	var card_content = $("<div></div>");
 
 // Add classes to style the card
-	column.addClass("col s12 m6 l4");
+	column.addClass("col s12 m12 l6");
 	card_small.addClass("card");
 	card_image.addClass("card-image");
 	card_content.addClass("card-content");
@@ -80,9 +80,8 @@ $('a[href^="#"]').on('click', function(event) {
 	
 	if( target.length ) {
 		event.preventDefault();
-		$('html, body').animate({
+		$('html').animate({
 			scrollTop: target.offset().top
 		}, {duration: 400, queue: false, easing: 'easeOutCubic'});
 	}
-	console.log($('body').scrollTop());
 });
